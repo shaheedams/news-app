@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/news-app/general">
+        <a className="navbar-brand" href="/news-app">
           News App
         </a>
         <button
@@ -23,15 +23,18 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              {location.pathname == "/news-app/general" ? (
-                <a className="nav-link active" href="/news-app/general">
+              {location.pathname == "/news-app" ? (
+                <a className={`nav-link active`} href="/news-app">
                   General
                 </a>
               ) : (
-                <a className="nav-link" href="/news-app/general">
+                <a className="nav-link" href="/news-app">
                   General
                 </a>
               )}
+              {/* <a className={`nav-link ${location.pathname === "/" ? 'active' : ""}`} href="/">
+                General
+              </a> */}
             </li>
             <li className="nav-item">
               {location.pathname == "/news-app/entertainment" ? (
